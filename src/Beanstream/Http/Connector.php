@@ -93,7 +93,7 @@ class Connector
 
         // Check for errors from the API
         if ($apiCode > 1 || ($httpCode < 200 || $httpCode >= 300)) {
-            throw new ApiException($decoded['message'], $apiCode);
+            throw new ApiException($decoded['message'], $apiCode, $decoded);
         }
 
         curl_close($ch);
