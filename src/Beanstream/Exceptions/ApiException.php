@@ -14,7 +14,7 @@ class ApiException extends Exception
     {
         $this->response = $response;
 
-        parent::__construct($this->message, $this->code);
+        parent::__construct($message, $code);
     }
 
     /**
